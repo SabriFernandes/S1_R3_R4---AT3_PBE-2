@@ -1,0 +1,418 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R1_PBE2
+meta:
+  id: wrk_4c252102ba2041bd81bab1ba47b28702
+  created: 1755607883701
+  modified: 1770139330913
+  description: ""
+collection:
+  - name: S1_R2 - AT2_PPDM
+    meta:
+      id: fld_0f322fe906144916bce58a295169358e
+      created: 1770139353724
+      modified: 1774981512487
+      sortKey: -1770139353724
+      description: ""
+    children:
+      - name: Categoria
+        meta:
+          id: fld_5432cf20ac204325b9b482cfbec0f1be
+          created: 1772545544122
+          modified: 1772545546347
+          sortKey: -1770143724680
+          description: ""
+        children:
+          - url: localhost:8000/categorias
+            name: Criar categoria
+            meta:
+              id: req_96b5f914ee0147ff8d59e7b0dabafa84
+              created: 1770139361068
+              modified: 1774964305757
+              isPrivate: false
+              description: ""
+              sortKey: -1772545590047
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Abacate", 
+                	"descricao": "Banana. Maça e Abacate"
+                }
+            parameters:
+              - name: descricaoCategoria
+                value: utensilios
+                description: ""
+                disabled: true
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/categorias
+            name: Listar categorias
+            meta:
+              id: req_1293b8f9db83432688541000843f2883
+              created: 1772545528431
+              modified: 1774964591704
+              isPrivate: false
+              description: ""
+              sortKey: -1772545589947
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/categorias/1
+            name: Alterar categoria
+            meta:
+              id: req_5a7bc7b9e1b04e50ab151a1110eff054
+              created: 1772545589847
+              modified: 1774965090773
+              isPrivate: false
+              description: ""
+              sortKey: -1772545589847
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |2-
+                 {
+                	    "nome": "Roupinhagtrrr",
+                			"descricao": "roupasssssssdsdsf",
+                			"dataCad": "2026-03-31T13:43:04.000Z"
+                		}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/categorias/ 1
+            name: Deletar categoria
+            meta:
+              id: req_654591c2bb6e4f7ca5ff371335d97301
+              created: 1772545716301
+              modified: 1774965460956
+              isPrivate: false
+              description: ""
+              sortKey: -1772545716301
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.3.1
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - name: Produtos
+            meta:
+              id: fld_1a8b4baf100346f98011b19ba24baa5d
+              created: 1773142020926
+              modified: 1773142024829
+              sortKey: -1772545589747
+              description: ""
+            children:
+              - url: localhost:8000/produtos
+                name: Criar produto
+                meta:
+                  id: req_98a13b19def14c97a4ea11d7f2bc5328
+                  created: 1773142034015
+                  modified: 1774979607451
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1773142037729
+                method: POST
+                body:
+                  mimeType: multipart/form-data
+                  params:
+                    - name: idCategoria
+                      value: "2"
+                      description: ""
+                      disabled: false
+                    - name: nome
+                      value: Frango
+                      description: ""
+                      disabled: false
+                    - name: valor
+                      value: "20.20"
+                      description: ""
+                      disabled: false
+                    - name: image
+                      value: ""
+                      description: ""
+                      disabled: false
+                      fileName: C:\Users\43651231810\Downloads\png.png
+                      type: file
+                headers:
+                  - name: Content-Type
+                    value: multipart/form-data
+                  - name: User-Agent
+                    value: insomnia/12.3.1
+                    description: ""
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: localhost:8000/produtos
+                name: Lista produto
+                meta:
+                  id: req_2166c3f838cc46ada799a2241b57136e
+                  created: 1773142103900
+                  modified: 1773155096607
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1773142037629
+                method: GET
+                headers:
+                  - name: User-Agent
+                    value: insomnia/12.3.1
+                    description: ""
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: localhost:8000/produtos/2
+                name: Deletar produto
+                meta:
+                  id: req_6ca8a57fa34a4aaebb244f9d1cde8b92
+                  created: 1773142168045
+                  modified: 1774980011255
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1773142037529
+                method: DELETE
+                headers:
+                  - name: User-Agent
+                    value: insomnia/12.3.1
+                    description: ""
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: localhost:8000/produtos/3
+                name: Alterar produto
+                meta:
+                  id: req_c95802b7afb4427baa7b351b4b9d838e
+                  created: 1773142199868
+                  modified: 1774980518751
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1773142037679
+                method: PUT
+                body:
+                  mimeType: application/json
+                  text: |-
+                    {
+                    	"idCategoria": 2, 
+                    	"nome": "banaaanaaa", 
+                    	"valor": "4.20"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                  - name: User-Agent
+                    value: insomnia/12.3.1
+                    description: ""
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+      - name: Cliente
+        meta:
+          id: fld_c1e8f1af74f54c96b0859bd59d022806
+          created: 1775583866702
+          modified: 1775583928374
+          sortKey: -1770143724780
+          description: ""
+        children:
+          - url: localhost:8000/clientes
+            name: Criar Cliente
+            meta:
+              id: req_abf8e6348cdc46468037d8b4645d9e2d
+              created: 1775583930173
+              modified: 1776181468188
+              isPrivate: false
+              description: ""
+              sortKey: -1775583930173
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Nicolete",
+                	"cpf": "47668960848",
+                	"telefones": "19988566238",
+                	"cep": "13175662",
+                	"numero": "300",
+                	"complemento": "Casa Amarela"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.4.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/clientes
+            name: Listar Cliente
+            meta:
+              id: req_183c420f658546d18d8dc06c45a832e7
+              created: 1776163649490
+              modified: 1776163681296
+              isPrivate: false
+              description: ""
+              sortKey: -1775583930273
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/clientes/25
+            name: Alterar cliente
+            meta:
+              id: req_92e736909d834ecc98f8c8e0f268f874
+              created: 1776163991160
+              modified: 1776184159871
+              isPrivate: false
+              description: ""
+              sortKey: -1775583930373
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Barbosa",
+                	"cpf": "47668960848",
+                	"telefone": "19988566238",
+                	"cep": "13175662",
+                	"numero": "300",
+                	"complemento": "Casa Amarela"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8000/clientes/25
+            name: Deletar Cliente
+            meta:
+              id: req_4bfbe3a566a74323a608b7ba80f85212
+              created: 1776173649435
+              modified: 1776185404227
+              isPrivate: false
+              description: ""
+              sortKey: -1775583930473
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6dde23a08ef54ea6343535fe1a026febd8cdbe28
+    created: 1770139237552
+    modified: 1770139237552
+environments:
+  name: Base Environment
+  meta:
+    id: env_6dde23a08ef54ea6343535fe1a026febd8cdbe28
+    created: 1755607883707
+    modified: 1770139235178
+    isPrivate: false
