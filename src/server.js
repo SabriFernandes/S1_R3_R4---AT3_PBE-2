@@ -1,11 +1,9 @@
 import express from "express";
-import routes from "./routes/routes.js";
-import 'dotenv/config';
-
+import pedidoRoutes from "./routes/pedidoRoutes.js";
 const app = express();
-app.use(express.json());//Tem que fazer
-app.use('/', routes);//Vai para a rota
+app.use(express.json());
+app.use(pedidoRoutes);
 
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${process.env.SERVER_PORT}`);
+app.listen(8000, () => {
+    console.log("Servidor rodando na porta 8000");
 });

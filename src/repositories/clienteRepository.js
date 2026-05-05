@@ -20,11 +20,8 @@ const clienteRepository = {
 
             // Insert Endereco
             const sqlEndereco = `
-                INSERT INTO enderecos 
-                ( CEP, Logradouro, Numero, Complemento, Bairro, Cidade, UF,idCliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            `;
-            const valuesEndereco = [
-                endereco.cep, endereco.logradouro, endereco.numero, endereco.complemento, endereco.bairro, endereco.cidade, endereco.uf, rowsCliente.insertId];
+                INSERT INTO enderecos ( CEP, Logradouro, Numero, Complemento, Bairro, Cidade, UF,idCliente) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+            const valuesEndereco = [endereco.cep, endereco.logradouro, endereco.numero, endereco.complemento, endereco.bairro, endereco.cidade, endereco.uf, rowsCliente.insertId];
             await conn.execute(sqlEndereco, valuesEndereco);
 
             conn.commit();

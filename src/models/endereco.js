@@ -156,15 +156,7 @@ export class Endereco {
     static alterar(dados, id){
         console.log(dados);
         
-        return new Endereco(
-            dados.cep,
-            dados.logradouro,
-            dados.numero,
-            dados.complemento,
-            dados.bairro,
-            dados.cidade,
-            dados.uf,
-            dados.idCliente, 
-            id); 
+        return new Endereco(dados.cep, dados.logradouro, dados.numero, dados.complemento, dados.bairro,
+ dados.cidade, dados.uf, dados.idCliente, id); 
     }
 }
